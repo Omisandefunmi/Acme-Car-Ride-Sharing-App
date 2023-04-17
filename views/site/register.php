@@ -33,7 +33,7 @@ $this->title = 'Register';
 
 <div class="form-group">
     <div class="offset-lg-1 col-lg-11">
-        <?= Html::submitButton('register', ['class' => 'btn btn-primary', 'name' => 'register-button']); ?>
+        <?= Html::submitButton('Sign Up', ['class' => 'btn btn-primary', 'name' => 'register-button']); ?>
 
     </div>
 </div>
