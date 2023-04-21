@@ -5,6 +5,7 @@ namespace app\models;
 use Yii;
 class Mailer{
     const TYPE_REGISTRATION = 1;
+    const TYPE_PASSWORD_RESET = 2;
     private static $from = ['omisandefunmi@gmail.com' => 'Acme Mailer'];
     private static $to;
     private static $subject;
@@ -21,6 +22,9 @@ class Mailer{
                 self::$subject = 'Activate Your Acme Account';
                 self::$renderFile = 'registration';
                 self::$renderParams = ['user' => $model];
+                break;
+
+            case self::TYPE_PASSWORD_RESET:
                 break;
             default:
                 return false;
