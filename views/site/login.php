@@ -44,5 +44,12 @@ $this->title = 'Login';
 
     <div class="offset-lg-1" style="color:#999;">
         <?php echo 'if you don\'t have an account <a href="/index.php?r=site%2Fregister">register here</a>'; ?>
+        <?= yii\authclient\widgets\AuthChoice::widget([
+            'baseAuthUrl' => ['site/auth'],
+            'popupMode' => false,
+            'options' => [
+                'class' => 'auth-clients-holder',
+            ]
+        ]) ?>
     </div>
 </div>
